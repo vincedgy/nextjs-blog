@@ -2,6 +2,15 @@ import Head from "next/head";
 import TitleComponent from "../components/TitleComponent"
 
 export default function About() {
+  const [ thing, setThing] = React.useState({})
+
+  React.useEffect( () => {
+    setThing({"message":"Hello World !"})
+    return () => {
+        setThing({})
+    }
+  }, [])
+
   return (
     <div className="container">
       <Head>
@@ -10,7 +19,10 @@ export default function About() {
       </Head>
 
       <main>
-        <TitleComponent title="About !!"/>
+        <TitleComponent title="About ?"/>
+        <div>
+            <p>{thing.message}</p>
+        </div>        
       </main>
 
       <style jsx>{`
