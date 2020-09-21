@@ -62,13 +62,16 @@ export default function Home() {
       </main>
 
       <footer>
+        Powered by{" "}
+        <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
+        <img src="/Nextjs-logo.svg"  alt="NextJs Logo" className="logo" />
+        </a>{" "}
+        and{" "}
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://getbootstrap.com/docs/4.5/getting-started/introduction/"
           target="_blank"
-          rel="noopener noreferrer"
         >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
+          <img src="/bootstrap-5.svg" alt="Bootstrap Logo" className="logo" />
         </a>
       </footer>
 
