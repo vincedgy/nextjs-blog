@@ -1,50 +1,63 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Link from "next/Link";
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Next Blog, by Vincedgy Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1 className="title">
-          Learn <a href="https://nextjs.org">Next.js!</a>
+          <small>the</small> Next Blog
         </h1>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
+        <p className="description">by Vincedgy</p>
+
+        <p>
+          find the <code>code</code> on{" "}
+          <a href="https://github.com/vincedgy/nextjs-blog">GitHub</a>
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <Link href="/docs">
+            <div className="card">
+              <h3>Sharing documentation &rarr;</h3>
+              <p>You may like the documentations I persnaly use.</p>
+            </div>
+          </Link>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Link href="/learn">
+            <div className="card">
+              <h3>Learn with me</h3>
+              <p>I learn by teaching... mostly... do you ?</p>
+            </div>
+          </Link>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <Link href="https://github.com/vincedgy">
+            <div className="card">
+              <h3>My GitHub &rarr;</h3>
+              <p>Peace of code, sometimes not peace of cake...</p>
+            </div>
+          </Link>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <Link href="https://app.netlify.com/sites/nervous-euclid-e9062d/deploys">
+            <div className="card">
+              <h3>Deployed on Netlifly &rarr;</h3>
+              <p>
+                <img
+                  alt="Netlify Status"
+                  src="https://api.netlify.com/api/v1/badges/bd3fd9e4-58c1-4e06-8100-14604e733208/deploy-status"
+                />
+              </p>
+              <p>
+                From Github to Netlifly automagicaly ! (Do you want to know how
+                ?)
+              </p>
+            </div>
+          </Link>
         </div>
       </main>
 
@@ -54,7 +67,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
       </footer>
@@ -205,5 +218,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }

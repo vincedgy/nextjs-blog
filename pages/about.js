@@ -14,7 +14,7 @@ export default function About() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>Next Blog, by Vincedgy</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
