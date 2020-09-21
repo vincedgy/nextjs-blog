@@ -24,28 +24,28 @@ export default function Home() {
         <div className="grid">
           <Link href="/docs">
             <div className="card">
-              <h3>Sharing documentation &rarr;</h3>
-              <p>You may like the documentations I persnaly use.</p>
+              <h3>Sharing documentation</h3>
+              <p>📖 You may like the docs I like !</p>
             </div>
           </Link>
 
           <Link href="/learn">
             <div className="card">
-              <h3>Learn with me</h3>
-              <p>I learn by teaching... mostly... do you ?</p>
+              <h3>Learning</h3>
+              <p>🤔 I learn by teaching... do you ?</p>
             </div>
           </Link>
 
           <Link href="https://github.com/vincedgy">
             <div className="card">
-              <h3>My GitHub &rarr;</h3>
-              <p>Peace of code, sometimes not peace of cake...</p>
+              <h3>My GitHub</h3>
+              <p>🍺 Piece of code, <br/>not piece of cake...</p>
             </div>
           </Link>
 
           <Link href="https://app.netlify.com/sites/nervous-euclid-e9062d/deploys">
             <div className="card">
-              <h3>Deployed on Netlifly &rarr;</h3>
+              <h3>Deployed on Netlifly</h3>
               <p>
                 <img
                   alt="Netlify Status"
@@ -53,8 +53,7 @@ export default function Home() {
                 />
               </p>
               <p>
-                From Github to Netlifly automagicaly ! (Do you want to know how
-                ?)
+                🚀 to Netlifly automagicaly
               </p>
             </div>
           </Link>
@@ -77,7 +76,7 @@ export default function Home() {
 
       <style jsx>{`
         .container {
-          min-height: 100vh;
+          min-height: 50vh;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;
@@ -159,17 +158,18 @@ export default function Home() {
           align-items: center;
           justify-content: center;
           flex-wrap: wrap;
-
           max-width: 800px;
           margin-top: 3rem;
         }
 
         .card {
           margin: 1rem;
+          min-height: 20vh;
           flex-basis: 45%;
-          padding: 1.5rem;
+          padding: 2.5rem;
           text-align: left;
           color: inherit;
+          background-color: #FBFBFB;
           text-decoration: none;
           border: 1px solid #eaeaea;
           border-radius: 10px;
