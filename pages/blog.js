@@ -1,8 +1,9 @@
 import Head from "next/head";
-import TitleComponent from "../components/TitleComponent"
+import Link from "next/link";
+import { Jumbotron } from "react-bootstrap";
+import TitleComponent from "../components/TitleComponent";
 
 export default function About() {
-
   return (
     <div className="container">
       <Head>
@@ -11,7 +12,18 @@ export default function About() {
       </Head>
 
       <main>
-        <TitleComponent title="The blog !"/>
+        <TitleComponent title="The blog !" />
+        <Jumbotron>
+          <ul>
+            <li>
+              <Link href="/blog/intro">
+                <div className="card">
+                  <a>Go to Intro</a>
+                </div>
+              </Link>
+            </li>
+          </ul>
+        </Jumbotron>
       </main>
 
       <style jsx>{`

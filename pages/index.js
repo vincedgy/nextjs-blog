@@ -1,6 +1,27 @@
 import Head from "next/head";
 import Link from "next/link";
-import Container from "react-bootstrap/Container"
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
+
+const AppCard = ({ title, subtitle, description, linkTo, linkTitle }) => {
+  return (
+    <Link href={linkTo}>
+      <Card
+        className="text-center"
+        style={{ minHeight: "12rem", marginTop: "2rem" }}
+      >
+        <Card.Body>
+          <Card.Title>{title}</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">{subtitle}</Card.Subtitle>
+          <Card.Text>{description}</Card.Text>
+          <Card.Link href={linkTo}>{linkTitle}</Card.Link>
+        </Card.Body>
+      </Card>
+    </Link>
+  );
+};
 
 export default function Home() {
   return (
@@ -11,63 +32,70 @@ export default function Home() {
       </Head>
 
       <main>
-      <Container>
-        <h1 className="title">
-          <small>the</small> Next Blog
-        </h1>
-
-        <p className="description">by Vincedgy</p>
-
-        <p className="description">
-          find the <code>code</code> on{" "}
-          <a href="https://github.com/vincedgy/nextjs-blog">GitHub</a>
-        </p>
-
-        <div className="grid">
-
-        <Link href="/docs">
-            <div className="card">
-              <h3>Sharing documentation</h3>
-              <p>📖 You may like the docs I like !</p>
-            </div>
-          </Link>
-
-          <Link href="/teaching">
-            <div className="card">
-              <h3>Teaching</h3>
-              <p>🤔 I learn by teaching... do you ?</p>
-            </div>
-          </Link>
-
-          <Link href="https://github.com/vincedgy">
-            <div className="card">
-              <h3>My GitHub</h3>
-              <p>🍺 Piece of code, <br/>not piece of cake...</p>
-            </div>
-          </Link>
-
-          <Link href="https://app.netlify.com/sites/nervous-euclid-e9062d/deploys">
-            <div className="card">
-              <h3>Deployed on Netlifly</h3>
-              <p>
-                <img
-                  alt="Netlify Status"
-                  src="https://api.netlify.com/api/v1/badges/bd3fd9e4-58c1-4e06-8100-14604e733208/deploy-status"
-                />
+        <Container>
+          <Row className="text-center justify-content-md-center">
+            <Col xs={12} md={6}>
+              <h1 className="title">
+                <small>the</small> Next Blog
+              </h1>
+              <p className="description">by Vincedgy</p>
+              <p className="description">
+                find the <code>code</code> on{" "}
+                <a href="https://github.com/vincedgy/nextjs-blog">GitHub</a>
               </p>
-              <p>
-                🚀 to Netlifly automagicaly
-              </p>
-            </div>
-          </Link>
-        </div>
+            </Col>
+          </Row>
+
+          <Row className="justify-content-md-center">
+            <Col xs={12} md={6}>
+              <AppCard
+                title="Sharing documentation"
+                linkTo="/docs"
+                description="A curated list of documentations I like to read over and over."
+                subtitle="📖 You may like the docs I like !"
+                linkTitle="go to docs"
+              />
+            </Col>
+            <Col xs={12} md={6}>
+              <AppCard
+                title="Teaching"
+                linkTo="/teaching"
+                description="My videos and courses on the Internet."
+                subtitle=" 🤔 I learn by teaching... do you ?"
+                linkTitle="Go to my courses"
+              />
+            </Col>
+            <Col xs={12} md={6}>
+              <AppCard
+                title="My GitHub"
+                linkTo="https://github.com/vincedgy"
+                description="All my public repose, with many projects and many languages..."
+                subtitle="🍺 Piece of code, not piece of cake..."
+                linkTitle="Go to GitHub"
+              />
+            </Col>
+            <Col xs={12} md={6}>
+              <AppCard
+                title="Deployed on Netlifly"
+                linkTo="https://app.netlify.com/sites/nervous-euclid-e9062d/deploys"
+                subtitle="🚀 to Netlifly automagicaly"
+                description={
+                  <img
+                    alt="Netlify Status"
+                    src="https://api.netlify.com/api/v1/badges/bd3fd9e4-58c1-4e06-8100-14604e733208/deploy-status"
+                  />
+                }
+                linkTitle="Go to deployement"
+              />
+            </Col>
+          </Row>
         </Container>
       </main>
 
       <footer>
         Powered by{" "}
         <a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
-        <img src="/Nextjs-logo.svg"  alt="NextJs Logo" className="logo" />
+          <img src="/Nextjs-logo.svg" alt="NextJs Logo" className="logo" />
         </a>{" "}
         and{" "}
         <a
@@ -80,7 +108,7 @@ export default function Home() {
 
       <style jsx>{`
         main {
-          padding: 5rem 0;
+          padding: 2rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -110,28 +138,6 @@ export default function Home() {
         a {
           color: inherit;
           text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
         }
 
         .description {
@@ -164,7 +170,7 @@ export default function Home() {
           padding: 2.5rem;
           text-align: left;
           color: inherit;
-          background-color: #FBFBFB;
+          background-color: #fbfbfb;
           text-decoration: none;
           border: 1px solid #eaeaea;
           border-radius: 10px;
@@ -190,7 +196,7 @@ export default function Home() {
         }
 
         .logo {
-          height: 1em;
+          height: 1.5em;
         }
 
         @media (max-width: 600px) {
