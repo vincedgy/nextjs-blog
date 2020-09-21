@@ -1,22 +1,24 @@
 import Head from "next/head";
 import Link from "next/link";
+import Container from "react-bootstrap/Container"
 
 export default function Home() {
   return (
-    <div className="container">
+    <>
       <Head>
         <title>Next Blog, by Vincedgy Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
+      <Container>
         <h1 className="title">
           <small>the</small> Next Blog
         </h1>
 
         <p className="description">by Vincedgy</p>
 
-        <p>
+        <p className="description">
           find the <code>code</code> on{" "}
           <a href="https://github.com/vincedgy/nextjs-blog">GitHub</a>
         </p>
@@ -59,6 +61,7 @@ export default function Home() {
             </div>
           </Link>
         </div>
+        </Container>
       </main>
 
       <footer>
@@ -76,15 +79,6 @@ export default function Home() {
       </footer>
 
       <style jsx>{`
-        .container {
-          min-height: 50vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
         main {
           padding: 5rem 0;
           flex: 1;
@@ -221,6 +215,6 @@ export default function Home() {
           box-sizing: border-box;
         }
       `}</style>
-    </div>
+    </>
   );
 }
