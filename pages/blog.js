@@ -1,20 +1,17 @@
 import Head from "next/head";
 import TitleComponent from "../components/TitleComponent"
 
-export default function Docs() {
+export default function About() {
 
   return (
     <div className="container">
       <Head>
-        <title>Docs I like, by Vincedgy</title>
+        <title>Blog, by Vincedgy</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <TitleComponent title="Docs I like."/>
-        <div>
-        <p>lorem</p>
-        </div>
+        <TitleComponent title="The blog !"/>
       </main>
 
       <style jsx>{`

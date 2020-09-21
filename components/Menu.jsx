@@ -24,6 +24,12 @@ const Menu = () => {
         </Link>
       </Nav.Item>
 
+      <Nav.Item>
+        <Link href="/blog" passHref>
+            <Nav.Link eventKey="3">Blog</Nav.Link>
+        </Link>
+      </Nav.Item>
+
     </Nav>
 
     <style jsx>{`

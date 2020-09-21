@@ -5,7 +5,7 @@ export default function About() {
   const [ thing, setThing] = React.useState({})
 
   React.useEffect( () => {
-    setThing({"message":"Hello World !"})
+    setThing({"message":"Hello World ?"})
     return () => {
         setThing({})
     }
@@ -22,7 +22,7 @@ export default function About() {
         <TitleComponent title="About ?"/>
         <div>
             <p>{thing.message}</p>
-        </div>        
+        </div>
       </main>
 
       <style jsx>{`

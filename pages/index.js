@@ -22,16 +22,17 @@ export default function Home() {
         </p>
 
         <div className="grid">
-          <Link href="/docs">
+
+        <Link href="/docs">
             <div className="card">
               <h3>Sharing documentation</h3>
               <p>📖 You may like the docs I like !</p>
             </div>
           </Link>
 
-          <Link href="/learn">
+          <Link href="/teaching">
             <div className="card">
-              <h3>Learning</h3>
+              <h3>Teaching</h3>
               <p>🤔 I learn by teaching... do you ?</p>
             </div>
           </Link>

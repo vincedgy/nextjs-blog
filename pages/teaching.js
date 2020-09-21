@@ -6,12 +6,12 @@ export default function Docs() {
   return (
     <div className="container">
       <Head>
-        <title>Docs I like, by Vincedgy</title>
+        <title>Teaching, by Vincedgy</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <TitleComponent title="Docs I like."/>
+        <TitleComponent title="I learn by teaching... and I like it."/>
         <div>
         <p>lorem</p>
         </div>
